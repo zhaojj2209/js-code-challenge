@@ -4,5 +4,9 @@
 // Output: `return` - summation to `n`, i.e. sum_to_n(5) === 1 + 2 + 3 + 4 + 5 === 15.
 
 var sum_to_n = function(n) {
-    // your code here
+    return sum_iter(n, 0);
 };
+
+function sum_iter(n, res) {
+    return n === 0 ? res : sum_iter(n - 1, res + n);
+}
